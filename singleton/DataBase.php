@@ -6,7 +6,10 @@
  * Date: 13/09/17
  * Time: 15:07
  */
-class DataBase
+
+require_once 'Singleton.php';
+
+class DataBase extends Singleton
 {
 
 }
