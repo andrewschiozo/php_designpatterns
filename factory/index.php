@@ -6,8 +6,11 @@
  * Time: 14:48
  */
 
-require_once 'Automovel.php';
+require_once 'FactoryAutomovel.php';
 
 $Tracker = FactoryAutomovel::create('Chevrollet', 'Tracker LTZ');
+$Ka      = FactoryAutomovel::create('Ford', 'Ka');
 
 echo $Tracker;
+echo '<br>';
+echo $Ka;
