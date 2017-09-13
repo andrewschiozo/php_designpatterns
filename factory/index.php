@@ -8,7 +8,7 @@
 
 require_once 'FactoryAutomovel.php';
 
-$Tracker = FactoryAutomovel::create('Chevrollet', 'Tracker LTZ');
+$Tracker = FactoryAutomovel::create('Chevrolet', 'Tracker LTZ');
 $Ka      = FactoryAutomovel::create('Ford', 'Ka');
 
 echo $Tracker;
