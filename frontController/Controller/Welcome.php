@@ -11,6 +11,6 @@ class Welcome
 
     public function index()
     {
-        echo 'Default method from ' . get_class($this) . ' controller. ';
+        echo '<br>Default method from ' . get_class($this) . ' controller. ';
     }
 }
