@@ -88,7 +88,7 @@ class FrontController implements iFrontController
     public function run()
     {
         // TODO: Implement run() method.
-        call_user_func(array(new $this->controller, $this->method), $this->params);
+        call_user_func_array(array(new $this->controller, $this->method), $this->params);
     }
 
     protected function parseUri()
