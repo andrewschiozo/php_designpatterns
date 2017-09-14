@@ -20,7 +20,9 @@ class FrontController implements iFrontController
     protected $controller = self::DEFAULT_CONTROLLER;
     protected $method     = self::DEFAULT_METHOD;
     protected $params     = array();
-    protected $basePath   = 'Controller/';
+
+    protected $basePath   = 'php_designpatterns/frontController/';
+    protected $controllerPath = 'Controller/';
 
     public function __construct(array $options = array())
     {
@@ -47,9 +49,9 @@ class FrontController implements iFrontController
     {
         // TODO: Implement setController() method.
         $controllerName = ucfirst(strtolower($controller));
-        if(file_exists($this->basePath . $controllerName . '.php'))
+        if(file_exists($this->controllerPath . $controllerName . '.php'))
         {
-            include $this->basePath . $controllerName . '.php';
+            include $this->controllerPath . $controllerName . '.php';
             if(!class_exists($controllerName))
             {
                 throw new InvalidArgumentException("Classe {$controllerName} nao declarada.");
@@ -91,6 +93,15 @@ class FrontController implements iFrontController
 
     protected function parseUri()
     {
-        echo $_SERVER['REQUEST_URI'];
+        $path = trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
+
+        if(strpos($path, $this->basePath) === 0)
+        {
+            $path = substr($path, strlen($this->basePath));
+        }
+
+        list($controller, $method, $params) = explode("/", $path, 3);
+        $params = explode("/", $params);
+        $this->__construct(array('controller' => $controller, 'method' => $method, 'params' => $params));
     }
 }
