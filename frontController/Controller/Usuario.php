@@ -11,11 +11,17 @@ class Usuario
 
     public function index()
     {
-        echo 'Default method from ' . get_class($this) . ' controller. ';
+        echo '<br>Default method from ' . get_class($this) . ' controller. ';
     }
 
     public function sayHello()
     {
-        echo 'Hello';
+        echo '<br>Hello';
+    }
+
+    public function sayHelloWithParams($name, $param2)
+    {
+        echo "<br>Hello dear {$name}";
+        echo "<br>Your second param was {$param2}";
     }
 }
