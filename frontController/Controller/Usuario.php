@@ -9,4 +9,13 @@
 class Usuario
 {
 
+    public function index()
+    {
+        echo 'Default method from ' . get_class($this) . ' controller. ';
+    }
+
+    public function sayHello()
+    {
+        echo 'Hello';
+    }
 }
