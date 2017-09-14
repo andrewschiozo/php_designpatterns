@@ -6,12 +6,11 @@
  * Date: 14/09/17
  * Time: 13:12
  */
-class Index
+class Welcome
 {
 
-
-    public function indexa()
+    public function index()
     {
-        echo '<br>Fui chamado ';
+        echo 'Default method from ' . get_class($this) . ' controller. ';
     }
 }
