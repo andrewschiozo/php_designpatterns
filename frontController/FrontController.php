@@ -30,14 +30,15 @@ class FrontController implements iFrontController
         }
         else
         {
-            if (isset($options["controller"])) {
-                $this->setController($options["controller"]);
-            }
-            if (isset($options["method"])) {
-                $this->setMethod($options["method"]);
-            }
-            if (isset($options["params"])) {
-                $this->setParams($options["params"]);
+            $options_keys = array('controller', 'method', 'params');
+            foreach($options_keys as $option_key)
+            {
+                $setMethodName = 'set';
+                if(isset($options[$option_key]))
+                {
+                    $setMethodName .= ucfirst(strtolower($option_key));
+                    $this->$setMethodName($options[$option_key]);
+                }
             }
         }
     }
