@@ -7,9 +7,6 @@
     require_once 'ISS.php';
     require_once 'KCV.php';
 
-    //Descontos
-    require_once 'CalculadoraDeDescontos.php';
-
     //Entidade para teste
     require_once 'Orcamento.php';
     require_once 'Item.php';
@@ -30,9 +27,3 @@ echo '<br>ICMS: R$ ' . number_format($calculadoraDeImpostos->calcula($reforma, n
 echo '<br>ISS: R$ '  . number_format($calculadoraDeImpostos->calcula($reforma, new ISS),2,',', '.');;
 echo '<br>KCV: R$ '  . number_format($calculadoraDeImpostos->calcula($reforma, new KCV),2,',', '.');;
 echo '<hr>';
-
-//Descontos
-echo 'Descontos <br>';
-
-$calculadoraDeDescontos = new CalculadoraDeDescontos();
-echo '<br>Descontos: R$ ' . number_format($calculadoraDeDescontos->desconto($reforma), 2, ',', '.');
