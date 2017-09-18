@@ -8,5 +8,5 @@
  */
 interface iImposto
 {
-    public function calcula(Orcamento $orcamento);
+    public function calcula(Orcamento $Orcamento);
 }

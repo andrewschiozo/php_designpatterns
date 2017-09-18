@@ -16,10 +16,10 @@
 
 //Params
 $reforma = new Orcamento();
-$reforma->addItem(new Item('Tijolo', 50));
+$reforma->addItem(new Item('Tijolo', 40));
 $reforma->addItem(new Item('Cimento 1kg', 50));
-$reforma->addItem(new Item('Cimento 1kg', 100));
-$reforma->addItem(new Item('Cimento 1kg', 101));
+$reforma->addItem(new Item('Cimento 1kg', 200));
+$reforma->addItem(new Item('Cimento 1kg', 300));
 
 echo '<h3>Valor do orcamento: R$ ' . $reforma->getValor();
 echo '</h3><hr>';

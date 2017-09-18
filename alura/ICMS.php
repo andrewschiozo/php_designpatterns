@@ -6,14 +6,23 @@
  * Date: 18/09/17
  * Time: 10:14
  */
-require_once 'iImposto.php';
+require_once 'TemplateImpostoCondicional.php';
 
-class ICMS implements iImposto
+class ICMS extends TemplateImpostoCondicional
 {
 
-    public function calcula(Orcamento $Orcamento)
+    public function deveUsarOMaximo(Orcamento $Orcamento)
     {
-        // TODO: Implement calcula() method.
+        return $Orcamento->getValor() > 500;
+    }
+
+    public function taxacaoMinima(Orcamento $Orcamento)
+    {
         return $Orcamento->getValor() * 0.05;
+    }
+
+    public function taxacaoMaxima(Orcamento $Orcamento)
+    {
+        return $Orcamento->getValor() * 0.15;
     }
 }
