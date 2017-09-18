@@ -11,15 +11,16 @@ class Orcamento
     private $valor;
     private $itens;
 
-    public function __construct($novoValor)
+    public function __construct()
     {
-        $this->valor = $novoValor;
+        $this->valor = 0;
         $this->itens = array();
     }
 
     public function addItem(Item $novoItem)
     {
         $this->itens[] = $novoItem;
+        $this->setValor($novoItem->getValor());
     }
 
     public function getValor()
@@ -32,5 +33,8 @@ class Orcamento
         return $this->itens;
     }
 
-
+    protected function setValor($novoValor)
+    {
+        $this->valor += $novoValor;
+    }
 }
