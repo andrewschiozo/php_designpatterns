@@ -1,23 +1,25 @@
 <?php
+namespace Desconto;
 
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
- * Time: 11:54
+ * Time: 11:37
  */
 
-class Desconto300Reais implements iDesconto
-{
+use Interfaces\iDesconto;
+use Entidade\Orcamento;
 
+class Desconto500Reais implements iDesconto
+{
     private $proximoDesconto;
 
     public function desconto(Orcamento $Orcamento)
     {
-        // TODO: Implement desconto() method.
-        if($Orcamento->getValor() > 300)
+        if($Orcamento->getValor() > 500)
         {
-            return $Orcamento->getValor() * 0.01;
+            return $Orcamento->getValor() * 0.05;
         }
         else
         {
@@ -27,7 +29,6 @@ class Desconto300Reais implements iDesconto
 
     public function setProximoDesconto(iDesconto $proximoDesconto)
     {
-        // TODO: Implement setProximoDesconto() method.
         $this->proximoDesconto = $proximoDesconto;
     }
 }

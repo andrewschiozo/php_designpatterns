@@ -1,5 +1,5 @@
 <?php
-
+namespace Entidade;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -16,7 +16,7 @@ class NotaFiscal
     private $observacoes;
     private $dataEmissao;
 
-    public function __construct($nomeEmpresa, $cnpj, $listaItens, $valorBruto, $valorImpostos, $observacoes, Datetime $data)
+    public function __construct($nomeEmpresa, $cnpj, $listaItens, $valorBruto, $valorImpostos, $observacoes, \Datetime $data)
     {
         $this->empresa = $nomeEmpresa;
         $this->cnpj = $cnpj;

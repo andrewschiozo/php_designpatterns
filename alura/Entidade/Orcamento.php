@@ -1,11 +1,14 @@
 <?php
-
+namespace Entidade;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
  * Time: 10:06
  */
+use State\EstadoEmAprovacao;
+use Interfaces\iEstadoDeUmOrcamento;
+
 class Orcamento
 {
     private $valor;

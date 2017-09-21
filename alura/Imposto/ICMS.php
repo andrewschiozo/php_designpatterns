@@ -1,23 +1,26 @@
 <?php
-
+namespace Imposto;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
- * Time: 10:15
+ * Time: 10:14
  */
 
-class ISS extends TemplateImpostoCondicional
+use Template\TemplateImpostoCondicional;
+use Entidade\Orcamento;
+
+class ICMS extends TemplateImpostoCondicional
 {
 
     public function deveUsarOMaximo(Orcamento $Orcamento)
     {
-        $Orcamento->getValor() > 300;
+        return $Orcamento->getValor() > 500;
     }
 
     public function taxacaoMinima(Orcamento $Orcamento)
     {
-        return $Orcamento->getValor() * 0.1;
+        return $Orcamento->getValor() * 0.05;
     }
 
     public function taxacaoMaxima(Orcamento $Orcamento)

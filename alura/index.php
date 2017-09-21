@@ -3,6 +3,18 @@
 require_once 'AutoLoader.php';
 new AutoLoader;
 
+use Entidade\Orcamento;
+use Entidade\Item;
+use Calculadora\CalculadoraDeImpostos;
+use Calculadora\CalculadoraDeDescontos;
+use Imposto\ICMS;
+use Imposto\ISS;
+use Imposto\KCV;
+use Builder\BuilderNotaFiscal;
+use Acoes\Impressora;
+use Acoes\Sms;
+use Dao\DaoNotaFiscal;
+
 //Params
 $reforma = new Orcamento();
 $reforma->addItem(new Item('Tijolo', 40));

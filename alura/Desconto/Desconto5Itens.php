@@ -1,11 +1,13 @@
 <?php
-
+namespace Desconto;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
  * Time: 11:37
  */
+use Interfaces\iDesconto;
+use Entidade\Orcamento;
 
 class Desconto5Itens implements iDesconto
 {

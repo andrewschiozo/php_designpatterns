@@ -16,9 +16,13 @@ class AutoLoader
 
     private function loader($className)
     {
-        if(!include_once $className . '.php')
-        {
-            throw new Exception("Classe {$className} nao encontrada");
+        $filename = str_replace("\\", '/', $className) . ".php";
+        if (file_exists($filename)) {
+            include($filename);
+            if (class_exists($className)) {
+                return TRUE;
+            }
         }
+        return FALSE;
     }
 }

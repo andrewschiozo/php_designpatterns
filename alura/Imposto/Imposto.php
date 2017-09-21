@@ -1,11 +1,14 @@
 <?php
 
+namespace Imposto;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
  * Time: 10:14
  */
+use Entidade\Orcamento;
+
 abstract class Imposto
 {
     protected $outroImposto;

@@ -1,11 +1,13 @@
 <?php
-
+namespace State;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 21/09/17
  * Time: 11:20
  */
+use Interfaces\iEstadoDeUmOrcamento;
+use Entidade\Orcamento;
 
 class EstadoEmAprovacao implements iEstadoDeUmOrcamento
 {
@@ -27,6 +29,6 @@ class EstadoEmAprovacao implements iEstadoDeUmOrcamento
 
     public function finaliza(Orcamento $Orcamento)
     {
-        throw new Exception("Apenas orçamentos aprovados podem ser finalizados");
+        throw new \Exception("Apenas orçamentos aprovados podem ser finalizados");
     }
 }

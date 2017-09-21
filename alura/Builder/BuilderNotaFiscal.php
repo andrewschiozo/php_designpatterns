@@ -1,11 +1,15 @@
 <?php
-
+namespace Builder;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 21/09/17
  * Time: 12:13
  */
+
+use Interfaces\iAcoesBuildNotaFiscal;
+use Entidade\Item;
+use Entidade\NotaFiscal;
 
 class BuilderNotaFiscal
 {
@@ -54,11 +58,11 @@ class BuilderNotaFiscal
         $this->observacoes = $observacao;
     }
 
-    public function naData(Datetime $data = null)
+    public function naData(\Datetime $data = null)
     {
         if(is_null($data))
         {
-            $this->dataEmissao = new Datetime;
+            $this->dataEmissao = new \Datetime;
         }
         else
         {
