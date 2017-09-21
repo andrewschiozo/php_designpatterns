@@ -25,6 +25,11 @@
     require_once 'NotaFiscal.php';
     require_once 'BuilderNotaFiscal.php';
 
+    //Açoes do Builder de Nota Fiscal
+    require_once 'Impressora.php';
+    require_once 'DaoNotaFiscal.php';
+    require_once 'Sms.php';
+
 //Params
 $reforma = new Orcamento();
 $reforma->addItem(new Item('Tijolo', 40));
@@ -75,6 +80,9 @@ foreach($itens as $item)
 }
 $geradorDeNf->comObservacoes('NF do orçamento numero 134');
 $geradorDeNf->naData();
+$geradorDeNf->addAcao(new Impressora);
+$geradorDeNf->addAcao(new DaoNotaFiscal);
+$geradorDeNf->addAcao(new Sms);
 
 $notaFiscal = $geradorDeNf->build();
 
