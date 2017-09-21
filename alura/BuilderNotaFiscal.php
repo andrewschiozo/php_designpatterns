@@ -17,11 +17,19 @@ class BuilderNotaFiscal
     private $observacoes;
     private $dataEmissao;
 
+    private $acoesBuild;
+
     public function __construct()
     {
         $this->valorBruto = 0;
         $this->valorImpostos = 0;
         $this->itens = array();
+        $this->acoesBuild = array();
+    }
+
+    public function addAcao(iAcoesBuildNotaFiscal$Acao)
+    {
+        $this->acoesBuild[] = $Acao;
     }
 
     public function comEmpresa($nomeEmpresa)
@@ -60,6 +68,16 @@ class BuilderNotaFiscal
 
     public function build()
     {
-        return new NotaFiscal($this->empresa, $this->cnpj, $this->itens, $this->valorBruto, $this->valorImpostos, $this->observacoes, $this->dataEmissao);
+        $nf = new NotaFiscal($this->empresa, $this->cnpj, $this->itens, $this->valorBruto, $this->valorImpostos, $this->observacoes, $this->dataEmissao);
+
+        foreach($this->acoesBuild as $Acao)
+        {
+            $Acao->executa($nf);
+        }
+        return $nf;
     }
+
+
+
+
 }
