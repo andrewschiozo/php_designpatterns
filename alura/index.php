@@ -21,6 +21,10 @@
     require_once 'EstadoFinalizado.php';
     require_once 'EstadoReprovado.php';
 
+    //Nota Fiscal
+    require_once 'NotaFiscal.php';
+    require_once 'BuilderNotaFiscal.php';
+
 //Params
 $reforma = new Orcamento();
 $reforma->addItem(new Item('Tijolo', 40));
@@ -55,3 +59,24 @@ echo '<br> Valor do orçamento aprovado: R$ ' . number_format($reforma->getValor
 
 $reforma->finaliza();
 echo '<br>Orçamento finalizado';
+echo '<hr>';
+
+//Nota Fiscal
+date_default_timezone_set('Brazil/East');
+
+echo 'Nota Fiscal:<br>';
+
+$geradorDeNf = new BuilderNotaFiscal();
+
+$geradorDeNf->comEmpresa('Alura');
+$geradorDeNf->comCnpj('1234');
+$geradorDeNf->addItem(new Item('Tijolo', 250));
+$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
+$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
+$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
+$geradorDeNf->comObservacoes('Tijolos laranjas');
+$geradorDeNf->naData();
+
+$notaFiscal = $geradorDeNf->build();
+
+var_dump($notaFiscal);
