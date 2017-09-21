@@ -26,7 +26,7 @@ echo '</h3><hr>';
 
 $calculadoraDeImpostos = new CalculadoraDeImpostos();
 echo '<br>Impostos';
-echo '<br>ICMS: R$ ' . number_format($calculadoraDeImpostos->calcula($reforma, new ICMS),2,',', '.');
+echo '<br>ICMS: R$ ' . number_format($calculadoraDeImpostos->calcula($reforma, new ICMS(new ISS)),2,',', '.');
 echo '<br>ISS: R$ '  . number_format($calculadoraDeImpostos->calcula($reforma, new ISS),2,',', '.');;
 echo '<br>KCV: R$ '  . number_format($calculadoraDeImpostos->calcula($reforma, new KCV),2,',', '.');;
 echo '<hr>';
