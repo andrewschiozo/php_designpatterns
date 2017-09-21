@@ -1,11 +1,7 @@
 <?php
 //Autoload
-function carregaClasse($nomeClasse)
-{
-    require_once $nomeClasse . '.php';
-}
-
-spl_autoload_register('carregaClasse');
+require_once 'AutoLoader.php';
+new AutoLoader;
 
 //Params
 $reforma = new Orcamento();
