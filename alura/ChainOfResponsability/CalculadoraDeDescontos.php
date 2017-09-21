@@ -1,5 +1,5 @@
 <?php
-namespace Calculadora;
+namespace ChainOfResponsability;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -8,10 +8,6 @@ namespace Calculadora;
  */
 
 use Entidade\Orcamento;
-use Desconto\Desconto5Itens;
-use Desconto\Desconto500Reais;
-use Desconto\Desconto300Reais;
-use Desconto\SemDesconto;
 
 class CalculadoraDeDescontos
 {

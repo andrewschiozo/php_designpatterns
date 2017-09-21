@@ -1,6 +1,6 @@
 <?php
 
-namespace Imposto;
+namespace Decorator;
 /**
  * Created by PhpStorm.
  * User: andrews

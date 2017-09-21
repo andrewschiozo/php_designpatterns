@@ -36,4 +36,31 @@ class NotaFiscal
     {
         return $this->cnpj;
     }
+
+    public function getItens()
+    {
+        return $this->itens;
+    }
+
+    public function getValorBruto()
+    {
+        return $this->valorBruto;
+    }
+
+    public function getValorImpostos()
+    {
+        return $this->valorImpostos;
+    }
+
+    public function getObservacoes()
+    {
+        return $this->observacoes;
+    }
+
+    public function getDataEmissao()
+    {
+        return $this->dataEmissao->format('d/m/Y H:i:s');
+    }
+
+
 }

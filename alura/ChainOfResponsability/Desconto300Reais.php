@@ -1,23 +1,25 @@
 <?php
-namespace Desconto;
+namespace ChainOfResponsability;
+
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
- * Time: 11:37
+ * Time: 11:54
  */
-use Interfaces\iDesconto;
 use Entidade\Orcamento;
 
-class Desconto5Itens implements iDesconto
+class Desconto300Reais implements iDesconto
 {
+
     private $proximoDesconto;
 
     public function desconto(Orcamento $Orcamento)
     {
-        if(count($Orcamento->getItens()) >= 5)
+        // TODO: Implement desconto() method.
+        if($Orcamento->getValor() > 300)
         {
-            return $Orcamento->getValor() * 0.1;
+            return $Orcamento->getValor() * 0.01;
         }
         else
         {
@@ -27,6 +29,7 @@ class Desconto5Itens implements iDesconto
 
     public function setProximoDesconto(iDesconto $proximoDesconto)
     {
+        // TODO: Implement setProximoDesconto() method.
         $this->proximoDesconto = $proximoDesconto;
     }
 }

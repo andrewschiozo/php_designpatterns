@@ -3,17 +3,17 @@
 require_once 'AutoLoader.php';
 new AutoLoader;
 
+use Builder\BuilderNotaFiscal;
+use ChainOfResponsability\CalculadoraDeDescontos;
 use Entidade\Orcamento;
 use Entidade\Item;
-use Calculadora\CalculadoraDeImpostos;
-use Calculadora\CalculadoraDeDescontos;
-use Imposto\ICMS;
-use Imposto\ISS;
-use Imposto\KCV;
-use Builder\BuilderNotaFiscal;
-use Acoes\Impressora;
-use Acoes\Sms;
-use Dao\DaoNotaFiscal;
+use Observer\Impressora;
+use Observer\Sms;
+use Observer\DaoNotaFiscal;
+use Strategy\CalculadoraDeImpostos;
+use Strategy\ICMS;
+use Strategy\ISS;
+use Strategy\KCV;
 
 //Params
 $reforma = new Orcamento();
@@ -71,4 +71,25 @@ $geradorDeNf->addAcao(new Sms);
 
 $notaFiscal = $geradorDeNf->build();
 
-var_dump($notaFiscal);
+echo '<br>Nome da empresa: ' . $notaFiscal->getEmpresa();
+echo '<br>CNPJ: ' . $notaFiscal->getCnpj();
+echo '<br>Data/Hora de Emissao: ' . $notaFiscal->getDataEmissao();
+echo '
+<table border>
+    <caption>Itens</caption>
+    <tr>
+        <th>Preço</th>
+        <th>Valor (R$)</th>
+    </tr>';
+foreach($itens = $notaFiscal->getItens() as $item)
+{
+    echo '
+<tr>
+    <td>' . $item->getNome() . '</td>
+    <td>' . number_format($item->getValor(), 2, ',', '.') . '</td>
+</tr>';
+}
+echo '</table>';
+echo '<br>Valor Bruto: ' . number_format($notaFiscal->getValorBruto(), 2, ',', '.');
+echo '<br>Impostos: ' . number_format($notaFiscal->getValorImpostos(), 2, ',', '.');
+echo '<hr>';

@@ -1,13 +1,13 @@
 <?php
 
-namespace Template;
+namespace TemplateMethod;
 /**
  * Created by PhpStorm.
  * User: andrews
  * Date: 18/09/17
  * Time: 14:14
  */
-use Imposto\Imposto;
+use Decorator\Imposto;
 use Entidade\Orcamento;
 
 abstract class TemplateImpostoCondicional extends Imposto

@@ -1,6 +1,6 @@
 <?php
 
-namespace Desconto;
+namespace ChainOfResponsability;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -8,7 +8,6 @@ namespace Desconto;
  * Time: 11:48
  */
 
-use Interfaces\iDesconto;
 use Entidade\Orcamento;
 
 class SemDesconto implements iDesconto

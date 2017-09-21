@@ -7,7 +7,7 @@ namespace Builder;
  * Time: 12:13
  */
 
-use Interfaces\iAcoesBuildNotaFiscal;
+use Observer\iAcoesBuildNotaFiscal;
 use Entidade\Item;
 use Entidade\NotaFiscal;
 

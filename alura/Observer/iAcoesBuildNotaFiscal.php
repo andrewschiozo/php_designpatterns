@@ -1,5 +1,5 @@
 <?php
-namespace Interfaces;
+namespace Observer;
 /**
  * Created by PhpStorm.
  * User: andrews

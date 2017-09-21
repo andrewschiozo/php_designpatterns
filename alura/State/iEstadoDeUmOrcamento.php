@@ -1,5 +1,5 @@
 <?php
-namespace Interfaces;
+namespace State;
 /**
  * Created by PhpStorm.
  * User: andrews

@@ -1,5 +1,5 @@
 <?php
-namespace Interfaces;
+namespace ChainOfResponsability;
 /**
  * Created by PhpStorm.
  * User: andrews

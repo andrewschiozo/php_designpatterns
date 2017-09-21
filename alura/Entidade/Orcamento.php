@@ -7,7 +7,7 @@ namespace Entidade;
  * Time: 10:06
  */
 use State\EstadoEmAprovacao;
-use Interfaces\iEstadoDeUmOrcamento;
+use State\iEstadoDeUmOrcamento;
 
 class Orcamento
 {

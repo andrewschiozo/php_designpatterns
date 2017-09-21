@@ -1,5 +1,5 @@
 <?php
-namespace Calculadora;
+namespace Strategy;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -7,7 +7,7 @@ namespace Calculadora;
  * Time: 10:08
  */
 use Entidade\Orcamento;
-use Imposto\Imposto;
+use Decorator\Imposto;
 
 class CalculadoraDeImpostos
 {

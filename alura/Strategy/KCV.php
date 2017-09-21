@@ -1,6 +1,6 @@
 <?php
 
-namespace Imposto;
+namespace Strategy;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -9,6 +9,7 @@ namespace Imposto;
  */
 
 use Entidade\Orcamento;
+use Decorator\Imposto;
 
 class KCV extends Imposto
 {

@@ -6,7 +6,6 @@ namespace State;
  * Date: 21/09/17
  * Time: 11:20
  */
-use Interfaces\iEstadoDeUmOrcamento;
 use Entidade\Orcamento;
 
 class EstadoFinalizado implements iEstadoDeUmOrcamento

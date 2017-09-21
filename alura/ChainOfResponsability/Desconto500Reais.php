@@ -1,5 +1,5 @@
 <?php
-namespace Desconto;
+namespace ChainOfResponsability;
 
 /**
  * Created by PhpStorm.
@@ -7,8 +7,6 @@ namespace Desconto;
  * Date: 18/09/17
  * Time: 11:37
  */
-
-use Interfaces\iDesconto;
 use Entidade\Orcamento;
 
 class Desconto500Reais implements iDesconto
