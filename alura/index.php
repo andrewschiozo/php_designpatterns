@@ -28,9 +28,9 @@
 //Params
 $reforma = new Orcamento();
 $reforma->addItem(new Item('Tijolo', 40));
-$reforma->addItem(new Item('Cimento 1kg', 50));
-$reforma->addItem(new Item('Cimento 1kg', 200));
-$reforma->addItem(new Item('Cimento 1kg', 200));
+$reforma->addItem(new Item('Cimento 10kg', 50));
+$reforma->addItem(new Item('Areia 100kg', 200));
+$reforma->addItem(new Item('Tinta branca 16L', 200));
 
 echo '<h3>Valor do orcamento: R$ ' . $reforma->getValor();
 echo '</h3><hr>';
@@ -62,19 +62,18 @@ echo '<br>Orçamento finalizado';
 echo '<hr>';
 
 //Nota Fiscal
-date_default_timezone_set('Brazil/East');
-
 echo 'Nota Fiscal:<br>';
 
 $geradorDeNf = new BuilderNotaFiscal();
 
 $geradorDeNf->comEmpresa('Alura');
 $geradorDeNf->comCnpj('1234');
-$geradorDeNf->addItem(new Item('Tijolo', 250));
-$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
-$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
-$geradorDeNf->addItem(new Item('Cimento 1kg', 250));
-$geradorDeNf->comObservacoes('Tijolos laranjas');
+$itens = $reforma->getItens();
+foreach($itens as $item)
+{
+    $geradorDeNf->addItem($item);
+}
+$geradorDeNf->comObservacoes('NF do orçamento numero 134');
 $geradorDeNf->naData();
 
 $notaFiscal = $geradorDeNf->build();
