@@ -10,17 +10,19 @@ class Orcamento
 {
     private $valor;
     private $itens;
+    private $estado;
 
     public function __construct()
     {
         $this->valor = 0;
         $this->itens = array();
+        $this->estado = new EstadoEmAprovacao();
     }
 
     public function addItem(Item $novoItem)
     {
         $this->itens[] = $novoItem;
-        $this->setValor($novoItem->getValor());
+        $this->setValor($this->getValor() + $novoItem->getValor());
     }
 
     public function getValor()
@@ -33,8 +35,39 @@ class Orcamento
         return $this->itens;
     }
 
-    protected function setValor($novoValor)
+    public function getEstado()
     {
-        $this->valor += $novoValor;
+        return $this->estado;
     }
+
+    public function setEstado(iEstadoDeUmOrcamento $novoEstado)
+    {
+        $this->estado = $novoEstado;
+    }
+
+    public function setValor($novoValor)
+    {
+        $this->valor = $novoValor;
+    }
+
+    public function aplicaDesconto()
+    {
+        $this->estado->aplica($this);
+    }
+
+    public function aprova()
+    {
+        $this->estado->aprova($this);
+    }
+
+    public function reprova()
+    {
+        $this->estado->reprova($this);
+    }
+
+    public function finaliza()
+    {
+        $this->estado->finaliza($this);
+    }
+
 }
