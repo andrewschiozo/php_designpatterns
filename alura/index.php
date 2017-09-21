@@ -14,12 +14,19 @@
     require_once 'Orcamento.php';
     require_once 'Item.php';
 
+    //Estados
+    require_once 'iEstadoDeUmOrcamento.php';
+    require_once 'EstadoAprovado.php';
+    require_once 'EstadoEmAprovacao.php';
+    require_once 'EstadoFinalizado.php';
+    require_once 'EstadoReprovado.php';
+
 //Params
 $reforma = new Orcamento();
 $reforma->addItem(new Item('Tijolo', 40));
 $reforma->addItem(new Item('Cimento 1kg', 50));
 $reforma->addItem(new Item('Cimento 1kg', 200));
-$reforma->addItem(new Item('Cimento 1kg', 300));
+$reforma->addItem(new Item('Cimento 1kg', 200));
 
 echo '<h3>Valor do orcamento: R$ ' . $reforma->getValor();
 echo '</h3><hr>';
@@ -36,3 +43,15 @@ echo 'Descontos <br>';
 
 $calculadoraDeDescontos = new CalculadoraDeDescontos();
 echo '<br>Descontos: R$ ' . number_format($calculadoraDeDescontos->desconto($reforma), 2, ',', '.');
+echo '<hr>';
+
+//Estados
+$reforma->aplicaDesconto();
+echo '<br> Valor do orçamento em aprovaçao: R$ ' . number_format($reforma->getValor(), 2, ',', '.');
+
+$reforma->aprova();
+$reforma->aplicaDesconto();
+echo '<br> Valor do orçamento aprovado: R$ ' . number_format($reforma->getValor(), 2, ',', '.');
+
+$reforma->finaliza();
+echo '<br>Orçamento finalizado';
