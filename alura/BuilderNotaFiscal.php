@@ -46,11 +46,11 @@ class BuilderNotaFiscal
         $this->observacoes = $observacao;
     }
 
-    public function naData($data = null)
+    public function naData(Datetime $data = null)
     {
         if(is_null($data))
         {
-            $this->dataEmissao = date('Y-m-d h:i:s');
+            $this->dataEmissao = new Datetime;
         }
         else
         {
