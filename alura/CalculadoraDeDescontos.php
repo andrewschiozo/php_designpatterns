@@ -6,10 +6,6 @@
  * Date: 18/09/17
  * Time: 11:15
  */
-require_once 'Desconto5Itens.php';
-require_once 'Desconto300Reais.php';
-require_once 'Desconto500Reais.php';
-require_once 'SemDesconto.php';
 
 class CalculadoraDeDescontos
 {

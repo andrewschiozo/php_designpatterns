@@ -6,7 +6,6 @@
  * Date: 18/09/17
  * Time: 14:14
  */
-require_once 'Imposto.php';
 
 abstract class TemplateImpostoCondicional extends Imposto
 {

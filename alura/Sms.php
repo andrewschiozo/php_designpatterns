@@ -6,7 +6,6 @@
  * Date: 21/09/17
  * Time: 14:06
  */
-require_once 'iAcoesBuildNota.php';
 
 class Sms implements iAcoesBuildNotaFiscal
 {

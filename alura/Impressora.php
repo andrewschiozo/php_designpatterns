@@ -6,7 +6,6 @@
  * Date: 21/09/17
  * Time: 13:55
  */
-require_once 'iAcoesBuildNota.php';
 
 class Impressora implements iAcoesBuildNotaFiscal
 {

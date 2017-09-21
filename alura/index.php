@@ -1,34 +1,11 @@
 <?php
-//Requires
+//Autoload
+function carregaClasse($nomeClasse)
+{
+    require_once $nomeClasse . '.php';
+}
 
-    //Impostos
-    require_once 'CalculadoraDeImpostos.php';
-    require_once 'ICMS.php';
-    require_once 'ISS.php';
-    require_once 'KCV.php';
-
-    //Descontos
-    require_once 'CalculadoraDeDescontos.php';
-
-    //Entidade para teste
-    require_once 'Orcamento.php';
-    require_once 'Item.php';
-
-    //Estados
-    require_once 'iEstadoDeUmOrcamento.php';
-    require_once 'EstadoAprovado.php';
-    require_once 'EstadoEmAprovacao.php';
-    require_once 'EstadoFinalizado.php';
-    require_once 'EstadoReprovado.php';
-
-    //Nota Fiscal
-    require_once 'NotaFiscal.php';
-    require_once 'BuilderNotaFiscal.php';
-
-    //Açoes do Builder de Nota Fiscal
-    require_once 'Impressora.php';
-    require_once 'DaoNotaFiscal.php';
-    require_once 'Sms.php';
+spl_autoload_register('carregaClasse');
 
 //Params
 $reforma = new Orcamento();

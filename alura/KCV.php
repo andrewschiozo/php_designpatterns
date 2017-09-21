@@ -6,7 +6,6 @@
  * Date: 18/09/17
  * Time: 10:34
  */
-require_once 'Imposto.php';
 
 class KCV extends Imposto
 {

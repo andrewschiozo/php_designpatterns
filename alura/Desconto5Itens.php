@@ -6,7 +6,6 @@
  * Date: 18/09/17
  * Time: 11:37
  */
-require_once 'iDesconto.php';
 
 class Desconto5Itens implements iDesconto
 {

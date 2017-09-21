@@ -6,7 +6,6 @@
  * Date: 18/09/17
  * Time: 11:54
  */
-require_once 'iDesconto.php';
 
 class Desconto300Reais implements iDesconto
 {
