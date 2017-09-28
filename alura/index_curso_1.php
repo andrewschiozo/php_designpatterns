@@ -5,12 +5,12 @@ new AutoLoader;
 
 use Builder\BuilderNotaFiscal;
 use ChainOfResponsability\CalculadoraDeDescontos;
-use Entidade\Orcamento;
-use Entidade\Item;
+use Common\Orcamento;
+use Common\Item;
 use Observer\Impressora;
 use Observer\Sms;
 use Observer\DaoNotaFiscal;
-use Strategy\CalculadoraDeImpostos;
+use Common\CalculadoraDeImpostos;
 use Strategy\ICMS;
 use Strategy\ISS;
 use Strategy\KCV;

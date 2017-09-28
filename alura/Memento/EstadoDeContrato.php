@@ -9,6 +9,8 @@
 namespace Memento;
 
 
+use Common\Contrato;
+
 class EstadoDeContrato
 {
     private $contrato;

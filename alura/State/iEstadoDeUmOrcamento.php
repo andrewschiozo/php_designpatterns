@@ -6,7 +6,7 @@ namespace State;
  * Date: 21/09/17
  * Time: 11:33
  */
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 interface iEstadoDeUmOrcamento
 {

@@ -5,8 +5,8 @@ require_once 'AutoLoader.php';
 new AutoLoader;
 
 use Factory\FactoryConnection;
-use Memento\Contrato;
-use Memento\Historico;
+use Common\Contrato;
+use Common\Historico;
 
 //Factory
 $factory = new FactoryConnection();

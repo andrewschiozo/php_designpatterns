@@ -8,7 +8,7 @@ namespace TemplateMethod;
  * Time: 14:14
  */
 use Decorator\Imposto;
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 abstract class TemplateImpostoCondicional extends Imposto
 {

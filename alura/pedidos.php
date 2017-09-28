@@ -8,7 +8,7 @@
 require_once 'AutoLoader.php';
 new AutoLoader();
 
-use Command\Pedido;
+use Common\Pedido;
 use Command\FilaDeExecucao;
 use Command\ComandoPagar;
 use Command\ComandoFinalizar;

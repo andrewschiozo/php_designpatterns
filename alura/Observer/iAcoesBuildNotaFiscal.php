@@ -7,7 +7,7 @@ namespace Observer;
  * Time: 13:58
  */
 
-use Entidade\NotaFiscal;
+use Common\NotaFiscal;
 
 interface iAcoesBuildNotaFiscal
 {

@@ -8,7 +8,7 @@ namespace Strategy;
  * Time: 10:34
  */
 
-use Entidade\Orcamento;
+use Common\Orcamento;
 use Decorator\Imposto;
 
 class KCV extends Imposto

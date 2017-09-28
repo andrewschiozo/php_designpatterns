@@ -7,7 +7,7 @@ namespace ChainOfResponsability;
  * Time: 11:15
  */
 
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class CalculadoraDeDescontos
 {

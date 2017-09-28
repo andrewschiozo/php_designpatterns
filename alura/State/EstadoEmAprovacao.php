@@ -6,7 +6,7 @@ namespace State;
  * Date: 21/09/17
  * Time: 11:20
  */
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class EstadoEmAprovacao implements iEstadoDeUmOrcamento
 {

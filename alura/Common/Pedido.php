@@ -1,5 +1,5 @@
 <?php
-namespace Command;
+namespace Common;
 use State\PedidoFinalizado;
 use State\PedidoNovo;
 use State\PedidoPago;

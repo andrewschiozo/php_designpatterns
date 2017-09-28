@@ -8,6 +8,7 @@
 
 namespace Command;
 
+use Common\Pedido;
 
 abstract class Comando implements iComando
 {

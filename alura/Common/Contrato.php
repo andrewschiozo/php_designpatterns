@@ -1,5 +1,6 @@
 <?php
-namespace Memento;
+namespace Common;
+use Memento\EstadoDeContrato;
 use State\iTipoDeContrato;
 use State\TipoNovo;
 

@@ -8,7 +8,7 @@ namespace ChainOfResponsability;
  * Time: 11:48
  */
 
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class SemDesconto implements iDesconto
 {

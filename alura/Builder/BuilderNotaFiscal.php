@@ -8,8 +8,8 @@ namespace Builder;
  */
 
 use Observer\iAcoesBuildNotaFiscal;
-use Entidade\Item;
-use Entidade\NotaFiscal;
+use Common\Item;
+use Common\NotaFiscal;
 
 class BuilderNotaFiscal
 {

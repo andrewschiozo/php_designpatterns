@@ -7,7 +7,7 @@ namespace Decorator;
  * Date: 18/09/17
  * Time: 10:14
  */
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 abstract class Imposto
 {

@@ -7,7 +7,7 @@ namespace Observer;
  * Date: 21/09/17
  * Time: 14:06
  */
-use Entidade\NotaFiscal;
+use Common\NotaFiscal;
 
 class Sms implements iAcoesBuildNotaFiscal
 {

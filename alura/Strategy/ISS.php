@@ -8,7 +8,7 @@ namespace Strategy;
  * Time: 10:15
  */
 use TemplateMethod\TemplateImpostoCondicional;
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class ISS extends TemplateImpostoCondicional
 {

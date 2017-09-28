@@ -6,7 +6,7 @@ namespace ChainOfResponsability;
  * Date: 18/09/17
  * Time: 11:42
  */
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 interface iDesconto
 {

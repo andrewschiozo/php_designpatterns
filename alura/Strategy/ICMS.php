@@ -8,7 +8,7 @@ namespace Strategy;
  */
 
 use TemplateMethod\TemplateImpostoCondicional;
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class ICMS extends TemplateImpostoCondicional
 {

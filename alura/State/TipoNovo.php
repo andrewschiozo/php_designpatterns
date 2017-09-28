@@ -8,7 +8,7 @@
 
 namespace State;
 
-use Memento\Contrato;
+use Common\Contrato;
 
 class TipoNovo implements iTipoDeContrato
 {

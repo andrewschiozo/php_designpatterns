@@ -7,7 +7,7 @@ namespace ChainOfResponsability;
  * Date: 18/09/17
  * Time: 11:37
  */
-use Entidade\Orcamento;
+use Common\Orcamento;
 
 class Desconto500Reais implements iDesconto
 {

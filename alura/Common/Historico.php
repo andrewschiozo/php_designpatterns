@@ -6,8 +6,10 @@
  * Time: 10:32
  */
 
-namespace Memento;
+namespace Common;
 
+
+use Memento\EstadoDeContrato;
 
 class Historico
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Entidade;
+namespace Common;
 /**
  * Created by PhpStorm.
  * User: andrews
