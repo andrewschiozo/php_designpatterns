@@ -1,5 +1,6 @@
 <?php
-
+namespace Interpreter;
+use Visitor\Impressora;
 
 /**
  * Created by PhpStorm.
@@ -21,5 +22,15 @@ class Numero implements iExpressao
     public function avalia()
     {
         return $this->numero;
+    }
+
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    public function aceita(Impressora $impressora)
+    {
+        $impressora->visitaNumero($this);
     }
 }

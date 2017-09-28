@@ -1,4 +1,6 @@
 <?php
+namespace Interpreter;
+use Visitor\Impressora;
 
 /**
  * Created by PhpStorm.
@@ -10,4 +12,6 @@ interface iExpressao
 {
 
     public function avalia();
+
+    public function aceita(Impressora $impressora);
 }

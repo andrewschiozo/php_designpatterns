@@ -1,5 +1,5 @@
 <?php
-
+namespace Interpreter;
 /**
  * Created by PhpStorm.
  * User: andrews
@@ -15,5 +15,15 @@ abstract class Expressao implements iExpressao
     {
         $this->esquerdo = $ladoEsquerdo;
         $this->direito = $ladoDireito;
+    }
+
+    public function getEsquerdo()
+    {
+        return $this->esquerdo;
+    }
+
+    public function getDireito()
+    {
+        return $this->direito;
     }
 }

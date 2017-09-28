@@ -1,5 +1,6 @@
 <?php
-
+namespace Interpreter;
+use Visitor\Impressora;
 
 /**
  * Created by PhpStorm.
@@ -19,4 +20,8 @@ class Soma extends Expressao
         return $valorEsquerd0 + $valorDireito;
     }
 
+    public function aceita(Impressora $impressora)
+    {
+        $impressora->visitaSoma($this);
+    }
 }
