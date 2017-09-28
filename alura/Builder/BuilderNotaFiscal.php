@@ -34,6 +34,7 @@ class BuilderNotaFiscal
     public function addAcao(iAcoesBuildNotaFiscal$Acao)
     {
         $this->acoesBuild[] = $Acao;
+        return $this;
     }
 
     public function comEmpresa($nomeEmpresa)
@@ -56,6 +57,7 @@ class BuilderNotaFiscal
     public function comObservacoes($observacao)
     {
         $this->observacoes = $observacao;
+        return $this;
     }
 
     public function naData(\Datetime $data = null)
@@ -68,6 +70,7 @@ class BuilderNotaFiscal
         {
             $this->dataEmissao = $data;
         }
+        return $this;
     }
 
     public function build()

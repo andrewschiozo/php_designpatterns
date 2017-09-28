@@ -63,11 +63,11 @@ foreach($itens as $item)
 {
     $geradorDeNf->addItem($item);
 }
-$geradorDeNf->comObservacoes('NF do orçamento numero 134');
-$geradorDeNf->naData();
-$geradorDeNf->addAcao(new Impressora);
-$geradorDeNf->addAcao(new DaoNotaFiscal);
-$geradorDeNf->addAcao(new Sms);
+$geradorDeNf->comObservacoes('NF do orçamento numero 134')
+            ->naData()
+            ->addAcao(new Impressora)
+            ->addAcao(new DaoNotaFiscal)
+            ->addAcao(new Sms);
 
 $notaFiscal = $geradorDeNf->build();
 
