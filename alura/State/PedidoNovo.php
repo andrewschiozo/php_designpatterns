@@ -9,7 +9,7 @@
 namespace State;
 
 
-interface iEstadoDeUmPedido
+class PedidoNovo implements iEstadoDeUmPedido
 {
 
 }

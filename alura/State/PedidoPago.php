@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: andrews
  * Date: 28/09/17
- * Time: 14:49
+ * Time: 14:50
  */
 
 namespace State;
 
 
-interface iEstadoDeUmPedido
+class PedidoPago implements iEstadoDeUmPedido
 {
 
 }
