@@ -15,15 +15,15 @@ $conexao = $factory->getConnection();
 //Memento
 $historico = new Historico();
 $contrato = new Contrato('Caelum', new \Datetime);
-var_dump($contrato);
+//var_dump($contrato);
 
 $historico->addEstado($contrato->salvaEstado());
 $contrato->avanca();
-var_dump($contrato);
+//var_dump($contrato);
 
 $historico->addEstado($contrato->salvaEstado());
 $contrato->avanca();
-var_dump($contrato);
+//var_dump($contrato);
 
-var_dump($historico->getEstado(0));
-var_dump($historico->getEstado(1));
+//var_dump($historico->getEstado(0));
+//var_dump($historico->getEstado(1));
