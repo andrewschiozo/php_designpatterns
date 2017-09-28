@@ -13,13 +13,21 @@ use Interpreter\Soma;
 use Interpreter\Numero;
 use Interpreter\Subtracao;
 use Visitor\Impressora;
+use Adapter\Relogio;
+use Bridge\GoogleMaps;
 
 $esquerdo = new Soma(new Numero(1), new Numero(3));
 $direito= new Subtracao(new Numero(2), new Numero(1));
 
 $soma = new Soma($esquerdo, $direito);
-
 $impressora = new Impressora();
-$soma->aceita($impressora);
 
-echo $soma->avalia();
+$data = new Relogio();
+$mapa = new GoogleMaps();
+
+echo $data->format('d/m/Y H:i:s') . ' | ';
+$soma->aceita($impressora);
+echo ' = ' . $soma->avalia();
+
+echo '<br>' . $mapa->getMapa();
+
