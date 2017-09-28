@@ -25,9 +25,9 @@ class Impressora
     public function visitaSubtracao(Subtracao $subtracao)
     {
         echo "(";
-        $subtracao->getEsquerdo();
+        $subtracao->getEsquerdo()->aceita($this);
         echo "-";
-        $subtracao->getDireito();
+        $subtracao->getDireito()->aceita($this);
         echo ")";
     }
 

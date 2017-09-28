@@ -13,10 +13,10 @@ class Subtracao extends Expressao
 
     public function avalia()
     {
-        $valorEsquerd0 = $this->esquerdo->avalia();
+        $valorEsquerdo = $this->esquerdo->avalia();
         $valorDireito = $this->direito->avalia();
 
-        return $valorEsquerd0 - $valorDireito;
+        return $valorEsquerdo - $valorDireito;
     }
 
     public function aceita(Impressora $impressora)
