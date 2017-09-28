@@ -5,6 +5,11 @@
  * Date: 28/09/17
  * Time: 15:32
  */
-use Memento\Contrato;
+require_once 'AutoLoader.php';
+new AutoLoader();
 
-$contrato = new Contrato("Caleum", new DateTime());
+use Facade\EmpresaFacade;
+
+$Empresa = EmpresaFacade::getInstance();
+$Contrato = $Empresa->criaContrato('Contrato 1', new \DateTime);
+var_dump($Contrato);
